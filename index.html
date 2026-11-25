@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>MOUSKI PRONOS - Football Intelligence</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090909;color:#fff;font-family:Arial,sans-serif}
+header{text-align:center;padding:25px 12px;background:#111;border-bottom:2px solid #c9a34b}
+header h1{color:#e8c36b;margin:0;font-size:28px}
+header p{color:#bbb;margin:8px}
+.gold{color:#e8c36b}
+nav{display:flex;gap:7px;overflow-x:auto;padding:12px;background:#171717}
+nav button{flex-shrink:0;background:#292929;color:white;border:1px solid #444;padding:12px;border-radius:8px}
+main{max-width:850px;margin:auto;padding:16px}
+section{display:none}
+section.active{display:block}
+.hero,.card{background:#171717;border:1px solid #5b4926;border-radius:14px;padding:19px;margin-bottom:15px}
+.hero{background:linear-gradient(135deg,#292315,#111)}
+button.action{background:#d9b451;color:#111;font-weight:bold;border:0;padding:13px 18px;border-radius:8px}
+.price{font-size:25px;font-weight:bold;color:#e8c36b}
+.small{font-size:13px;color:#aaa;line-height:1.6}
+footer{text-align:center;color:#888;padding:25px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>⚽ MOUSKI PRONOS</h1>
+<p>FOOTBALL INTELLIGENCE</p>
+<p class="gold">L'intelligence au service du football.</p>
+</header>
+
+<nav>
+<button onclick="page('accueil')">Accueil</button>
+<button onclick="page('matchs')">Matchs</button>
+<button onclick="page('premium')">Premium</button>
+<button onclick="page('vip')">VIP</button>
+<button onclick="page('compte')">Mon compte</button>
+</nav>
+
+<main>
+
+<section id="accueil" class="active">
+<div class="hero">
+<h2>Bienvenue sur <span class="gold">MOUSKI PRONOS</span></h2>
+<p>Ton intelligence artificielle dédiée à l'analyse du football.</p>
+<p>Découvre les statistiques, les probabilités et les estimations de scores.</p>
+<button class="action" onclick="page('matchs')">Découvrir les matchs</button>
+</div>
+<div class="card">
+<h3 class="gold">🤖 Intelligence football</h3>
+<p>Des analyses pour mieux comprendre les rencontres.</p>
+<p class="small">Les pronostics sont des estimations et ne garantissent aucun gain.</p>
+</div>
+<div class="card">
+<h3>🔄 Actualisation automatique</h3>
+<p class="gold">Fréquence prévue : 30 minutes</p>
+<p class="small">La connexion aux données réelles reste à configurer sur un serveur sécurisé.</p>
+</div>
+</section>
+
+<section id="matchs">
+<h2 class="gold">⚽ Centre des matchs</h2>
+<div class="card">
+<h3>Compétitions suivies</h3>
+<p>Premier League</p>
+<p>La Liga</p>
+<p>Serie A</p>
+<p>Bundesliga</p>
+<p>Ligue 1</p>
+<p>Ligue des Champions UEFA</p>
+<p>Ligue des Champions CAF</p>
+<p>Championnats africains</p>
+</div>
+<div class="card">
+<h3>Analyses et pronostics</h3>
+<p>Les matchs réels apparaîtront après la connexion de la source de données football.</p>
+<p class="small">Aucune rencontre fictive ne sera présentée comme un vrai match.</p>
+</div>
+</section>
+
+<section id="premium">
+<h2 class="gold">⭐ Nos abonnements Premium</h2>
+<div class="card"><h3>Accès gratuit</h3><p class="price">0 FCFA</p><p>2 pronostics par jour.</p></div>
+<div class="card"><h3>Premium 24 heures</h3><p class="price">500 FCFA</p><p>Accès aux analyses Premium.</p></div>
+<div class="card"><h3>Premium 7 jours</h3><p class="price">2 000 FCFA</p></div>
+<div class="card"><h3>Premium 30 jours</h3><p class="price">5 000 FCFA</p></div>
+<p class="small">Les abonnements seront activés après installation du paiement sécurisé.</p>
+</section>
+
+<section id="vip">
+<h2 class="gold">👑 Espace VIP</h2>
+<div class="card">
+<h3>VIP 30 jours</h3>
+<p class="price">10 000 FCFA</p>
+<p>Analyses avancées et statistiques approfondies.</p>
+<p class="small">Accès réservé aux abonnés VIP après activation du système.</p>
+</div>
+</section>
+
+<section id="compte">
+<h2 class="gold">👤 Mon compte</h2>
+<div class="card">
+<p>La création de compte sera bientôt disponible.</p>
+<p>Connexion prévue par téléphone ou adresse e-mail.</p>
+<p class="small">Les comptes et les mots de passe nécessiteront un service sécurisé.</p>
+</div>
+</section>
+
+</main>
+
+<footer>
+MOUSKI PRONOS © 2026<br>
+FOOTBALL INTELLIGENCE
+</footer>
+
+<script>
+function page(id){
+document.querySelectorAll('main section').forEach(function(s){
+s.classList.remove('active');
+});
+document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
